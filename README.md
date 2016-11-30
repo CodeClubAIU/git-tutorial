@@ -90,42 +90,47 @@ Now that you have created your page, you can add a link to it in index.html:
 
 https://help.github.com/articles/creating-a-pull-request/
 
+## Step 5: Rebasing and merge conflicts
+
 + sometimes, other branches might have been updated and merged into the master. Thus the master branch now would have
 a commit history ahead of the one present locally. In order to have a linear history of commits you have to follow:
 
-1. Get the latest updates of master.
++ Get the latest updates of master.
 
 ```
 $ git checkout master
 $ git pull
 ```
 
-2. update your branch to incorporate the latest changes and create a linear history. You will use 'rebase' for that. Check the link below for information about rebasing.
++ update your branch to incorporate the latest changes and create a linear history. You will use 'rebase' for that. Check the link below for information about rebasing.
 https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 ```
 $ git checkout <branch-name>
 $ git rebase -i master
-
 ```
 
-3. after the last command. You will have the terminal opening a window with list of commits you have made. Like this:
++ after the last command. You will have the terminal opening a window with list of commits you have made. Like this:
 
+```
  pick 034b3 'first commit message'
  pick 345df 'second commit message'
+```
 
-You will want to represent your branch with only one commit message. (p.s. the window is a vim and in order to use it, these are the commands list http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm):
-    a. If you have more than one commit follow below:
-        i. press 'i' <!-- this changes the vim to allow you to input -->
-        ii. change all the 'pick' apart from the 1st one to 'squash'. so it looks like this:
++ You will want to represent your branch with only one commit message. (p.s. the window is a vim and in order to use it, these are the commands list http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm):
+    * If you have more than one commit follow below:
+        * press 'i' <!-- this changes the vim to allow you to input -->
+        * change all the 'pick' apart from the 1st one to 'squash'. so it looks like this:
+            ```
             pick 034b3 'first commit message'
             squash 345df 'second commit message'
-    b. press ESC then type ':wq!' <!-- this exits the input mode and saves the file -->
-    c. press enter
+            ```
+    * press ESC then type ':wq!' <!-- this exits the input mode and saves the file -->
+    * press enter
 
 If you have successfully rebased then a message will appear that it was successful. Otherwise, seek a mentor for help.
 
-4. Unsuccessful rebasing can be due to the fact of merging issues. That is, if a file is changed in both your branch and the destination branch, and git doesn't know which version to keep then you will have to fix these conflicts manually then rebase again. <!-- Please ask the mentor to further explain if not understood -->
+* Unsuccessful rebasing can be due to the fact of merging issues. That is, if a file is changed in both your branch and the destination branch, and git doesn't know which version to keep then you will have to fix these conflicts manually then rebase again. <!-- Please ask the mentor to further explain if not understood -->
 This link can demonstrate how to deal with conflicts: https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/
 
 
