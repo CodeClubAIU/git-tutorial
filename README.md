@@ -33,8 +33,11 @@ In order to make contribution to a project, you first have to clone the repo in 
 
 This means you are duplicating the files. You may think of it as a way to request a brand new working directory, staging area, and project history that is an independent entity from the original branch (the parent) which is often called master locally and origin remotely.
 
+To create a branch please go to : https://github.com/CodeClubAIU/git-tutorial
+Click on Branch button type your branch name and click Create Branch, and your branch is created.
+
 ```
-$ git branch < branch-name >
+$ git fetch
 $ git checkout < branch-name >
 ```
 
