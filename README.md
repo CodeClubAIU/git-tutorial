@@ -110,7 +110,7 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 ```
 $ git checkout <branch-name>
-$ git rebase -i master
+$ git rebase master -i
 ```
 
 + after the last command. You will have the terminal opening a window with list of commits you have made. Like this:
