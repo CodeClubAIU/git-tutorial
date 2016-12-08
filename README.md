@@ -82,18 +82,7 @@ Now that you have created your page, you can add a link to it in index.html:
 
 + Next, again commit and push to your branch.
 
-## Step 4: Make a pull request
-
-+ The usual convention to have your branch merged (your changes appear in the main branch) with the main branch, is to create a pull request.
-+ Pull requests is a feature to make collaborations easily with other developers. It is a mechanism to notify team members that they have completed a feature. Then the rest can review the code and merge it into the master branch, or comment on it if issues occur and discuss with the developer for further improvements. For more information you can read: https://www.atlassian.com/git/tutorials/making-a-pull-request/how-it-works
-
-+ Go to the main page of the repository. In the "Branch" menu, choose the branch that contains your commits. To the right, click 'New pull request'
-
-+ Use the base branch from the dropdown you'd like to merge your changes into (master) then choose your branch from the 'compare' branch drop-down. Type in a title and description (be concise and informative). Click 'Create pull request'.
-
-https://help.github.com/articles/creating-a-pull-request/
-
-## Step 5: Rebasing and merge conflicts
+## Step 4: Rebasing and merge conflicts
 
 + sometimes, other branches might have been updated and merged into the master. Thus the master branch now would have
 a commit history ahead of the one present locally. In order to have a linear history of commits you have to follow:
@@ -110,7 +99,7 @@ https://git-scm.com/book/en/v2/Git-Branching-Rebasing
 
 ```
 $ git checkout <branch-name>
-$ git rebase -i master
+$ git rebase master -i
 ```
 
 + after the last command. You will have the terminal opening a window with list of commits you have made. Like this:
@@ -136,6 +125,16 @@ If you have successfully rebased then a message will appear that it was successf
 * Unsuccessful rebasing can be due to the fact of merging issues. That is, if a file is changed in both your branch and the destination branch, and git doesn't know which version to keep then you will have to fix these conflicts manually then rebase again. <!-- Please ask the mentor to further explain if not understood -->
 This link can demonstrate how to deal with conflicts: https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/
 
+## Step 5: Make a pull request
+
++ The usual convention to have your branch merged (your changes appear in the main branch) with the main branch, is to create a pull request.
++ Pull requests is a feature to make collaborations easily with other developers. It is a mechanism to notify team members that they have completed a feature. Then the rest can review the code and merge it into the master branch, or comment on it if issues occur and discuss with the developer for further improvements. For more information you can read: https://www.atlassian.com/git/tutorials/making-a-pull-request/how-it-works
+
++ Go to the main page of the repository. In the "Branch" menu, choose the branch that contains your commits. To the right, click 'New pull request'
+
++ Use the base branch from the dropdown you'd like to merge your changes into (master) then choose your branch from the 'compare' branch drop-down. Type in a title and description (be concise and informative). Click 'Create pull request'.
+
+https://help.github.com/articles/creating-a-pull-request/
 
 ## Resources:
 https://www.atlassian.com/git/tutorials
