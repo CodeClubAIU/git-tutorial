@@ -1,0 +1,24 @@
+Step 1:
+
+
+Step 2:
+	first go to repository directory
+	- git branch: will tell ya the existing branches in local repository
+		*: means you're in that branch
+	- git branch --all: display all branches with remote ones
+	- git status: almost same as git branch
+	- git branch <name>: create another branch
+	- git checkout <name>: switch to branch <name>
+	
+
+Step 3:
+	- the file has to be in the directory where u want to push ur file to
+	- you have to have the access to that account
+	- git add . : will add all new changes
+	- but "git add <directory>": will add changes in a specific file.
+	- let's change content of one the files and commit it
+	- 
+
+
+Step 4:
+	 
